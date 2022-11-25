@@ -1,6 +1,7 @@
 package com.example.expviewpager;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Produit {
@@ -39,14 +40,12 @@ public class Produit {
     float prix;
     int photo;
     public static ArrayList<Produit> lstPro ()
-    {
-         ArrayList<Produit> lst = new ArrayList<Produit>();
-               lst.add(new Produit("Stylo", 10f, R.drawable.ic_stylo));
-               lst.add( new Produit("Carnet", 20f, R.drawable.ic_carnet));
-               lst.add( new Produit("Feuilles blanches", 30f, R.drawable.ic_feuille));
-               lst.add( new Produit("Crayon", 40f, R.drawable.ic_crayon));
-
-        return lst;
-
+    {  return new ArrayList<Produit>(
+            Arrays.asList(
+                    new Produit("Stylo", 10f, R.drawable.ic_stylo),
+                    new Produit("Carnet", 20f, R.drawable.ic_carnet),
+                    new Produit("Feuilles blanches", 30f, R.drawable.ic_feuille),
+                    new Produit("Crayon", 40f, R.drawable.ic_crayon)
+            ));
     }
 }

@@ -20,7 +20,7 @@ extends FragmentStateAdapter
         PFragment F = new PFragment();
         Bundle B = new Bundle();
         B.putString("Nom",Produit.lstPro().get(position).getNom());
-        B.putDouble("Prix",Produit.lstPro().get(position).getPrix());
+        B.putFloat("Prix",Produit.lstPro().get(position).getPrix());
         B.putInt("Image",Produit.lstPro().get(position).getPhoto());
         F.setArguments(B);
         return F;
